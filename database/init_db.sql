@@ -1,0 +1,27 @@
+CREATE DATABASE VQA_DB;
+GO
+
+USE VQA_DB;
+
+CREATE TABLE Images (
+    ImageID INT PRIMARY KEY IDENTITY(1,1),
+    FileName NVARCHAR(255),
+    FilePath NVARCHAR(500),
+    FileData VARBINARY(MAX),
+    UploadTime DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Questions (
+    QuestionID INT PRIMARY KEY IDENTITY(1,1),
+    ImageID INT FOREIGN KEY REFERENCES Images(ImageID),
+    QuestionText NVARCHAR(MAX),
+    AskedTime DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Answers (
+    AnswerID INT PRIMARY KEY IDENTITY(1,1),
+    QuestionID INT FOREIGN KEY REFERENCES Questions(QuestionID),
+    AnswerText NVARCHAR(MAX),
+    ConfidenceScore FLOAT,
+    AnswerTime DATETIME DEFAULT GETDATE()
+);
