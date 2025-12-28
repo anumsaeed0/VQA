@@ -46,3 +46,29 @@ VisionFusion AI is a multimodal web application that seamlessly combines **image
 ---
 
 VisionFusion AI delivers a unified **Image ↔ Text Intelligence System**, making AI-powered visual understanding and creativity accessible through a single web platform.
+
+---
+
+## 🛠️ Technology Stack
+
+**Backend**
+
+* Python
+* FastAPI (RESTful API framework)
+
+**Frontend**
+
+* React
+* JavaScript
+* HTML5
+* CSS3
+
+**Database**
+
+* SQL Server (T-SQL)
+
+**Architecture**
+
+* Multimodal AI system integrating image processing and natural language understanding (NLP)
+
+---
