@@ -5,3 +5,7 @@ transformers
 pillow
 pyodbc
 python-dotenv
+diffusers
+transformers
+accelerate
+safetensors
